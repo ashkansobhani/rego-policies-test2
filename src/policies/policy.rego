@@ -5,7 +5,7 @@ import data.NAC.policy_demo.rules
 import data.resources
 import data.NAC.group_policy_demo.grouprules
 
-
+default test = false
 test[result]{
     attr:=inputattributes[_]
     #Load the user and resource information
@@ -26,8 +26,9 @@ test[result]{
 
     #Find the group policy that matches the user that has requested access
     ReturnPolicy:={GroupPolicy|GroupPolicy["Subject"]["Subject"]==GroupName}
-
+    
     result:=UserACL
+    true
 }
 #Find the group name the user belongs to
 Retrieve_Group_Name(namelist,name)=groupname{
