@@ -5,10 +5,6 @@ import data.NAC.policy_demo.rules
 import data.resources
 import data.NAC.group_policy_demo.grouprules
 
-test[hello] {
-    true
-    hello = "Hello, World!"
-}
 
 test[result]{
     attr:=inputattributes[_]
