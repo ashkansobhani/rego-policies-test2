@@ -28,7 +28,7 @@ test[result]{
     ReturnPolicy:={GroupPolicy|GroupPolicy["Subject"]["Subject"]==GroupName}
     
     result:=UserACL
-    
+    true
 }
 #Find the group name the user belongs to
 Retrieve_Group_Name(namelist,name)=groupname{
